@@ -1,0 +1,7 @@
+backend/ticketflight/ticket/__pycache__/models.cpython-310.pyc
+backend/ticketflight/ticket/__pycache__/serialize.cpython-310.pyc
+backend/ticketflight/ticket/__pycache__/views.cpython-310.pyc
+backend/ticketflight/ticket/migrations/__pycache__/0002_alter_ticket_from_date_alter_ticket_to_date.cpython-310.pyc
+backend/ticketflight/ticketflight/__pycache__/settings.cpython-310.pyc
+backend/ticketflight/ticketflight/__pycache__/urls.cpython-310.pyc
+ticket-flight/.gitignore

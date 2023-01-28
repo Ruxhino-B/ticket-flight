@@ -1,0 +1,29 @@
+
+
+    <mat-card>
+          <div class="loginBox">
+            <img src="../../assets/user.png" alt="">
+            <form [formGroup]="Login" (ngSubmit)="ProceedLogin()">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" placeholder="Username">
+                <button mat-icon-button matSuffix>
+                  <mat-icon>person</mat-icon>
+                </button>
+              </mat-form-field>
+            
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Pasword</mat-label>
+                  <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="Password" (keyup.enter)="ProceedLogin()">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+                <br>
+                <button mat-raised-button color="primary" class="example-full-width"  type="submit">Login</button>
+                <mat-error *ngIf="errorSrv != null">Please Check Username Password</mat-error>
+            </form>
+          </div> 
+    </mat-card>
+
+<app-footer></app-footer>

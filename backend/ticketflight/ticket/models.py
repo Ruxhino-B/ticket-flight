@@ -25,8 +25,8 @@ class Ticket(models.Model):
     ticket_type = models.CharField(max_length=250)
     ticket_type_id = models.CharField(max_length=250)
     price = models.CharField(max_length=10)
-    from_date = models.DateTimeField()
-    to_date = models.DateTimeField()
+    from_date = models.CharField(max_length=25)
+    to_date = models.CharField(max_length=20)
     seat_number = models.CharField(max_length=10)
 
     def __str__(self):

@@ -1,0 +1,62 @@
+<form [formGroup]="TicketFormGroup" (ngSubmit)="submit()">
+    <br><br><br><br>
+    <div class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Inbound</mat-label>
+        <input type="text" matInput formControlName="inbound">
+       
+        </mat-form-field>
+    </div>
+
+    <div >        
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Outbound</mat-label>
+            <input type="text" matInput formControlName="outbound" >
+           
+            </mat-form-field>
+      </div>
+
+      <div >        
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Ticket Type</mat-label>
+          <input type="text" matInput formControlName="ticket_type" >
+         
+          </mat-form-field>
+    </div>
+
+    <div >        
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Price</mat-label>
+          <input type="number" matInput formControlName="price" >
+         
+          </mat-form-field>
+    </div>
+    <div >        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate formControlName="from_date" placeholder="Start date">
+              <input matEndDate formControlName="to_date" placeholder="End date">
+            </mat-date-range-input>
+            <!-- <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          
+            <mat-error *ngIf="TicketFormGroup.controls.from_date.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+            <mat-error *ngIf="TicketFormGroup.controls.to_date.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+
+          </mat-form-field>
+          
+        
+    </div>
+
+    <div >        
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Seat Number</mat-label>
+          <input type="number" matInput formControlName="seat_number" >
+         
+          </mat-form-field>
+    </div>
+
+    <button mat-raised-button [disabled]="!TicketFormGroup.valid" color="primary" type="submit" class="example-container">Submit</button>
+</form>

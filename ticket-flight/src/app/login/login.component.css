@@ -1,0 +1,29 @@
+mat-card{
+    margin: 0;
+    padding: 0;
+    font-family: sant-serif;
+    min-height: 95vh;
+    max-height: 90vh;
+    background-image: url('../../assets/img.jpg');
+    width: 100%;
+    background-size: cover;
+   
+}
+
+.loginBox{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    min-height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+img{
+    margin: auto;
+    display: block;
+}

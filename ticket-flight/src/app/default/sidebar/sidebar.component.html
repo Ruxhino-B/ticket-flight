@@ -1,0 +1,27 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2 style=" text-transform: capitalize;">Welcome {{user}}</h2>
+            <h4>{{email}}</h4>
+        </div>
+        <img src="{{photo}}" alt="">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Ticket</h2>
+
+    <div *ngIf="permisson"> <a mat-list-item routerLinkActive="list-item-active" routerLink="dashboard">
+        <mat-icon>dashboard_customize</mat-icon>
+        Dashboard</a>
+    </div> 
+     <a mat-list-item routerLinkActive="list-item-active" routerLink="">
+        <mat-icon>airlines</mat-icon>
+        View Tickets</a>
+   <a mat-list-item routerLinkActive="list-item-active" routerLink="/ticket/create">
+        <mat-icon>airplane_ticket</mat-icon>
+        Create Ticket
+    </a>
+  
+    
+    

@@ -15,12 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from ticket.views import TicketCreateListView, TicketRetriveUpdateDestroy
+from ticket.views import TicketCreateListView, TicketRetriveUpdateDestroy, GetEmployeRoleDetail, TicketCreate
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
+    path('emp/<int:pk>/', GetEmployeRoleDetail.as_view()),
     path('ticket', TicketCreateListView.as_view()),
+    path('ticket/create', TicketCreate.as_view()),
     path('ticket/<int:pk>', TicketRetriveUpdateDestroy.as_view())
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

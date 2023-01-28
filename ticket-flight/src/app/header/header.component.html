@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button class="example-icon" (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+            
+        </button>
+        
+        <span>Lufthansa</span>
+        <span class="example-spacer"></span>
+        
+                <button mat-icon-button class="example-icon">
+                    <mat-icon>settings</mat-icon>
+                </button>
+            
+                <button mat-icon-button class="example-icon">
+                    <mat-icon>help_outline</mat-icon>
+                </button>
+           
+                <button mat-icon-button class="example-icon favorite-icon" [matMenuTriggerFor]="menu">
+                    <mat-icon>person_outline</mat-icon>
+                </button>
+                    <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="logout()">
+                        <mat-icon>exit_to_app</mat-icon>
+                        Sign out
+                    </button>
+                </mat-menu>
+           
+        
+    </mat-toolbar-row>
+</mat-toolbar>

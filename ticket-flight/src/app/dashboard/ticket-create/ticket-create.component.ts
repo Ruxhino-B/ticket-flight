@@ -12,17 +12,12 @@ import { SharedServiceService } from 'src/app/shared-service.service';
 })
 export class TicketCreateComponent {
  
-  constructor(    
-    private service: SharedServiceService,
-  ) { 
-   
-  }
+  constructor( private service: SharedServiceService,) { }
 
   tickeMixtList: any = [];
   idList: any =[1];
   maxID: any = [];
-  from_date: any = [];
-  to_date: any = [];
+  
   
 
   TicketFormGroup = new FormGroup({
@@ -58,9 +53,8 @@ export class TicketCreateComponent {
         const ticketMix = ticket.inbound + ticket.outbound + ticket.ticket_type + ticket.from_date + ticket.seat_number;
         // I add them all on ticketMixList and on submit i ceck if exit this unik ID
         this.tickeMixtList.push(ticketMix.toLowerCase())
-      }
+      }      
       
-      console.log(this.tickeMixtList)
     })
 
   }
@@ -82,7 +76,7 @@ export class TicketCreateComponent {
       seat_number: this.f['seat_number'].value
     }   
 
-    // Create Unice ID and check if exit on 
+    // Create Unice ID and check if exit on this.tickeMixtList
 
     const ticketMix2 = String(this.f['inbound'].value?.toLocaleLowerCase()) + 
     this.f['outbound'].value?.toLocaleLowerCase() + this.f['ticket_type'].value?.toLocaleLowerCase() +
@@ -94,7 +88,7 @@ export class TicketCreateComponent {
       this.TicketFormGroup.controls.seat_number.patchValue('')
     }else{
       this.service.addTicket(value).subscribe(res=>{
-        console.log(res);
+        // console.log(res);
         this.TicketFormGroup.reset();
         this.idList = [];
         this.tickeMixtList = [];

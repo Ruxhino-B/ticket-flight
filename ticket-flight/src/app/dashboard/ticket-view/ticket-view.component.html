@@ -1,1 +1,50 @@
-<p>ticket-view works!</p>
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+<table mat-table [dataSource]="ticket" class="mat-elevation-z8 demo-table">
+
+    <ng-container matColumnDef="inbound">
+        <th mat-header-cell *matHeaderCellDef> Inbound </th>
+        <td mat-cell *matCellDef="let element"> {{element.inbound}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="outbound">
+        <th mat-header-cell *matHeaderCellDef> Outbound </th>
+        <td mat-cell *matCellDef="let element"> {{element.outbound}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ticket_type">
+        <th mat-header-cell *matHeaderCellDef> Ticket Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.ticket_type}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ticket_type_id">
+        <th mat-header-cell *matHeaderCellDef> Ticket Type Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.ticket_type_id}} </td>
+    </ng-container>   
+
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>  
+
+    <ng-container matColumnDef="from_date">
+        <th mat-header-cell *matHeaderCellDef> From Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.from_date}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="to_date">
+        <th mat-header-cell *matHeaderCellDef> To Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.to_date}}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="seat_number">
+        <th mat-header-cell *matHeaderCellDef> Seat Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.seat_number}} </td>
+    </ng-container> 
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

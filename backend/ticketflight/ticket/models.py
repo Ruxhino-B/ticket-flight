@@ -29,5 +29,7 @@ class Ticket(models.Model):
     to_date = models.CharField(max_length=20)
     seat_number = models.CharField(max_length=10)
 
+
+
     def __str__(self):
         return self.ticket_type_id

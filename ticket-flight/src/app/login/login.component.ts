@@ -56,6 +56,7 @@ export class LoginComponent {
       this.service.getEmployee(this.user.id).subscribe(rez => {
         this.employee = rez;
         localStorage.setItem('role', this.employee.role);
+        localStorage.setItem('emp_id', this.employee.id);
         localStorage.setItem('user', this.user.username);
         localStorage.setItem('id', this.user.id);
         localStorage.setItem('photo', this.employee.photo);

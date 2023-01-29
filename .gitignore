@@ -5,3 +5,6 @@ backend/ticketflight/ticket/migrations/__pycache__/0002_alter_ticket_from_date_a
 backend/ticketflight/ticketflight/__pycache__/settings.cpython-310.pyc
 backend/ticketflight/ticketflight/__pycache__/urls.cpython-310.pyc
 ticket-flight/.gitignore
+backend/ticketflight.zip
+backend/ticketflight/.idea/workspace.xml
+backend/ticketflight/ticket/migrations/__pycache__/__init__.cpython-310.pyc

@@ -111,4 +111,7 @@ I make the same think with data that I get from FormGroup and I check if this Fo
 For more check ticket-create.component.ts
 
 
+UML Diagram
+![Blank diagram](https://user-images.githubusercontent.com/32514053/215353052-4f7af399-ae21-4802-a8bd-995da81cfd56.png)
+
 

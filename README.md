@@ -114,4 +114,13 @@ For more check ticket-create.component.ts
 UML Diagram
 ![Blank diagram](https://user-images.githubusercontent.com/32514053/215353052-4f7af399-ae21-4802-a8bd-995da81cfd56.png)
 
-
+API link used for this project:
+  GET https://app-test.ruxhino.al/ticket -> give all list of ticket
+  POST https://app-test.ruxhino.al/ticket/create -> create new ticket
+  GET https://app-test.ruxhino.al/ticket/<id> -> retrive one ticket
+  PATCH https://app-test.ruxhino.al/ticket/<id> -> update ticket
+  Delete https://app-test.ruxhino.al/ticket/<id> -> delete ticket
+  POST https://app-test.ruxhino.al/auth/users/me/ -> Login(output of this is TOKEN>
+  GET https://app-test.ruxhino.al/auth/users/me/ -> GET User data
+  GET https://app-test.ruxhino.al/emp/ -> get employee data
+  

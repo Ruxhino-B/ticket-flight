@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { SharedServiceService } from 'src/app/shared-service.service';
+import { TicketUpdateComponent } from '../ticket-update/ticket-update.component';
 
 
 @Component({
@@ -13,10 +15,13 @@ import { SharedServiceService } from 'src/app/shared-service.service';
 
 export class TicketViewComponent {
   
-  constructor( private service: SharedServiceService,) { }
+  constructor( 
+    private service: SharedServiceService,
+    private matDialog: MatDialog
+    ) { }
 
   ticket: any = [];
-  displayedColumns: string[] = ['inbound', 'outbound', 'ticket_type', 'ticket_type_id', 'price', 'from_date', 'to_date', 'seat_number'];
+  displayedColumns: string[] = ['inbound', 'outbound', 'ticket_type', 'ticket_type_id', 'price', 'from_date', 'to_date', 'seat_number', 'update', 'delete'];
   userTicket: any = [];
   
   
@@ -52,6 +57,25 @@ export class TicketViewComponent {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.ticket.filter = filterValue.trim().toLowerCase();
+  }
+
+  updateProduct(product: any){
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.data = product;
+    // matDialog open o modal or dialog Box
+    this.matDialog.open(TicketUpdateComponent, dialogConfig)
+  }
+  deleteProduct(id:any){
+
+    alert("Delete Code is made a coment because of creation Way. To understand more contact with balliu@ruxhino.al")
+
+    // Uncoment code below to delete ticket
+
+    // this.service.deleteTicket(id).subscribe(res=>{
+    //   console.log(res);
+    //   alert("Delete Done")
+    // })
   }
 
 }

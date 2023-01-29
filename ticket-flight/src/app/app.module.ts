@@ -44,6 +44,7 @@ import { LoginComponent } from './login/login.component';
 import { TicketCreateComponent } from './dashboard/ticket-create/ticket-create.component';
 import { TicketViewComponent } from './dashboard/ticket-view/ticket-view.component';
 import { SidebarComponent } from './default/sidebar/sidebar.component';
+import { TicketUpdateComponent } from './dashboard/ticket-update/ticket-update.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { SidebarComponent } from './default/sidebar/sidebar.component';
     LoginComponent,
     TicketCreateComponent,
     TicketViewComponent,
-    SidebarComponent
+    SidebarComponent,
+    TicketUpdateComponent
   ],
   imports: [
     BrowserModule,

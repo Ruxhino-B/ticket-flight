@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="391a5ae9-21c2-41cf-92b5-9f7fa312dc4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticket-flight/src/app/dashboard/ticket-create/ticket-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ticket-flight/src/app/dashboard/ticket-create/ticket-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticket-flight/src/app/dashboard/ticket-view/ticket-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ticket-flight/src/app/dashboard/ticket-view/ticket-view.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="391a5ae9-21c2-41cf-92b5-9f7fa312dc4c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

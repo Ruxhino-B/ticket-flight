@@ -8,3 +8,4 @@ ticket-flight/.gitignore
 backend/ticketflight.zip
 backend/ticketflight/.idea/workspace.xml
 backend/ticketflight/ticket/migrations/__pycache__/__init__.cpython-310.pyc
+backend/ticketflight/.idea/workspace.xml

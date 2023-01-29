@@ -1,0 +1,15 @@
+.shembull{
+    min-width: 350px;
+    height: 600px;
+  }
+
+
+form{
+    /* position: absolute;     */
+    left: 30%;
+    text-align: center;
+}
+
+mat-form-field{
+    width: 252px;
+}
